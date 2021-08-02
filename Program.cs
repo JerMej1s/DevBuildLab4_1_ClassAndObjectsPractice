@@ -10,11 +10,11 @@ namespace Lab4_1_ClassAndObjectPractice
         public void Resize(double newLength, double newHeight)
         {
             if (newLength < 0 || newHeight < 0) return;
-            else
-            {
+            else length = newLength; height = newHeight;
+            /* {
                 length = newLength;
                 height = newHeight;
-            }
+            } */
         }
 
         public double GetArea()
@@ -67,21 +67,27 @@ namespace Lab4_1_ClassAndObjectPractice
             p1.Print();
             p2.Print();
 
-            p1.Resize(-11, 13);
-            p2.Resize(17, -19);
+            p1.Resize(11, 13);
+            p2.Resize(17, 19);
 
             p1.Print();
             p2.Print();
 
-            p1.Resize(0, 23);
-            p2.Resize(29, 0);
+            p1.Resize(-23, 29);
+            p2.Resize(31, -37);
+
+            p1.Print();
+            p2.Print();
+
+            p1.Resize(0, 39);
+            p2.Resize(43, 0);
 
             p1.Print();
             p2.Print();
 
             Book b1 = new Book() { authorLastName = "Stinks", authorFirstName = "R.L.", ISBN = "ABBA123", publisher = "Pelican", numCopiesSold = 5};
             Book b2 = new Book() { authorLastName = "Suess", authorFirstName = "Nurse", ISBN = "666", publisher = "In the Hat", numCopiesSold = 100000};
-            Book b3 = new Book() { authorLastName = "Pawston", authorFirstName = "Shave", ISBN = "4455CC", publisher = "J & R Publishing House", numCopiesSold = 12};
+            Book b3 = new Book() { authorLastName = "Pawston", authorFirstName = "Shave", ISBN = "4455CC", publisher = "J & R Publishing House", numCopiesSold = 99};
 
             b1.Print();
             b2.Print();
